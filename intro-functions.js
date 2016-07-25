@@ -12,7 +12,12 @@ var myObject = {
  */
 
 function max(a, b){
-    // YOUR CODE HERE
+  // YOUR CODE HERE
+    if (a > b) {
+      return a;
+    } else {
+      return b;
+    }
 }
 
 console.assert(max(1,3) === 3);
@@ -30,7 +35,18 @@ console.assert(isNaN(max("aaa","bbb")));
  */
 
 function maxOfThree(a, b, c){
-    // YOUR CODE HERE
+  // YOUR CODE HERE
+    if (a > max(b, c)) {
+      return a;
+    } else {
+      return max(b,c);
+    }
+
+    if (b > max(a,c)) {
+      return b;
+    } else {
+      return max(a,c);
+    }
 }
 
 console.assert(maxOfThree(1,3,2) === 3);
@@ -49,6 +65,17 @@ console.assert(isNaN(maxOfThree("aaa","bbb","ccc")));
 
 function isVowel(char){
     // YOUR CODE HERE
+    if (typeof char != "string") {
+      return false;
+    }
+
+    char = char.toUpperCase();
+    if (char === "A" || char === "E" || char === "I" || char === "O" || char === "U") {
+      return true;
+    } else {
+      return false;
+    }
+
 }
 
 console.assert(isVowel(0) === false);
@@ -71,6 +98,23 @@ console.assert(isVowel("E") === true);
 
 function rovarspraket(text){
     // YOUR CODE HERE
+
+
+
+    if (typeof text != "string") {
+      text = text.toString();
+      return text;
+    }
+
+    var word ="";
+    for (i = 0; i < text.length; i++) {
+      if (isVowel(text[i]) === true) {
+        word = word + text[i];
+      } //end of if
+      else {
+        word = word + text[i] + "o" + text[i];
+      }
+    } return word//end of for loop
 }
 
 console.assert(rovarspraket("a") === "a")
@@ -90,6 +134,7 @@ console.assert(rovarspraket(0) === "0")
 
 function reverse(str){
     // YOUR CODE HERE
+    return str.split("").reverse().join("");
 }
 
 console.assert(reverse("books") === "skoob")
@@ -106,6 +151,13 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
 
 function findLongestWord(sentence){
     // YOUR CODE HERE
+  var strSplit = sentence.split(" ");
+  var longestWord = "";
+  for(i = 0; i < strSplit.length; i++){
+    if(strSplit[i].length > longestWord.length){
+	     longestWord = strSplit[i];
+    }
+  }return longestWord;
 }
 
 console.assert(findLongestWord("book dogs") === "book")

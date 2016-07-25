@@ -28,7 +28,9 @@ function doSomethingCool() {
 }
 
 // Put your answer below -------------------------
-
+function () {
+  console.log("Something Cool!");
+}
 
 // -----------------------------------------------
 
@@ -48,7 +50,10 @@ function sayHi() {
 setTimeout(sayHi, 2000);
 
 // Put your answer below -------------------------
-
+setTimeout (function () {
+  alert("Hello, World");
+},
+2000)
 
 // -----------------------------------------------
 
@@ -78,7 +83,10 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
+[c]: z then y
 
+Letter "x" is never being logged. "z" will load imediately and "y" will take 1
+second to load.
 
 // -----------------------------------------------
 
@@ -101,6 +109,7 @@ var reverseStr = function(str) {
 
 // Put your answer below -------------------------
 
+return str.split("").reverse().join("");
 
 // -----------------------------------------------
 
@@ -134,7 +143,15 @@ var spanishColor = function(colorName) {
 };
 
 // Put your answer below -------------------------
+colorName = colorName.toLowerCase();
 
+var colorName = {
+  "rojo": "#ff0000",
+  "blanco": "#ffffff",
+  "azul": "#0000ff",
+  "verde": "#00ff00",
+  "negro": "#000000"
+}
 
 // -----------------------------------------------
 
@@ -151,7 +168,8 @@ var spanishColor = function(colorName) {
 var foo = "bar";
 
 // Put your answer below -------------------------
-
+var foo;
+foo = "bar";
 
 // -----------------------------------------------
 
@@ -173,7 +191,11 @@ var callTenTimes = function(callback) {
 };
 
 // Put your answer below -------------------------
+var callNTimes = function(callback) {
+  for (i = 0; i < callback; i++) {
 
+  }
+}; /*wasn't sure about this one. I think we have may to implement .ranch and .each*/
 
 // -----------------------------------------------
 
@@ -201,7 +223,15 @@ var decreaseScore = function() {
 };
 
 // Put your answer below -------------------------
+var increaseScore = function() {
+  score = 0;
+  score++;
+};
 
+var decreaseScore = function() {
+  score = 0;
+  score--;
+};
 
 // -----------------------------------------------
 
@@ -221,7 +251,11 @@ var addNumbers = function(numberA, numberB) {
 var twoPlusTwo = addNumbers(2,2);
 
 // Put your answer below -------------------------
+var addNumbers = function(numberA, numberB) {
+  return(numberA + numberB);
+};
 
+var twoPlusTwo = addNumbers(2,2);
 
 // -----------------------------------------------
 
@@ -247,6 +281,15 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+The variable "speed" is set to a number. In the function it is trying to add
+a number and a string. speed = 0 + the string "amount".
+
+var speed = 0;
+var amount = 1;
+var accelerate = function(amount) {
+  speed += amount;
+};
+
 
 
 // -----------------------------------------------
