@@ -151,14 +151,14 @@ console.assert(reverse("we don't want no trouble") === "elbuort on tnaw t'nod ew
 
 function findLongestWord(sentence){
     // YOUR CODE HERE
-  var strSplit = sentence.split(" ");
-  var longestWord = "";
-  for(i = 0; i < strSplit.length; i++){
-    if(strSplit[i].length > longestWord.length){
-	     longestWord = strSplit[i];
-    }
-  }return longestWord;
-}
+    var strSplit = sentence.split(" ");
+    var longestWord = "";
+    for(i = 0; i < strSplit.length; i++){
+      if(strSplit[i].length > longestWord.length){
+  	     longestWord = strSplit[i];
+      }
+    }return longestWord;
+  }
 
 console.assert(findLongestWord("book dogs") === "book")
-console.assert(findLongestWord("don't mess with Texas") === "Texas")
+console.assert(findLongestWord("don't mess with Texas") === "Texas") //it's returning don't as the longest word because of the aspostrophe
