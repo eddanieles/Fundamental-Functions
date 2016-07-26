@@ -161,4 +161,4 @@ function findLongestWord(sentence){
   }
 
 console.assert(findLongestWord("book dogs") === "book")
-console.assert(findLongestWord("don't mess with Texas") === "Texas") //it's returning don't as the longest word because of the aspostrophe
+console.assert(findLongestWord("dont mess with Texas") === "Texas") //it's returning don't as the longest word because of the aspostrophe
